@@ -23,31 +23,31 @@ A simple full-stack web application for managing CPUs, built as an assessment pr
 
 ## Project Structure
 
+```text
 cpu_web_app/
-├── cpu_backend/                          # Spring Boot backend
-│   ├── src/main/java/com/example/cpu_backend
-│   │   ├── entity/                       # Entities (Cpu, SocketType)
-│   │   │   ├── Cpu.java
-│   │   │   └── SocketType.java
-│   │   ├── repo/                         # JPA Repositories
-│   │   │   ├── CpuRepository.java
-│   │   │   └── SocketTypeRepository.java
-│   │   ├── controller/                   # REST Controllers
-│   │   │   └── CpuController.java
-│   │   └── config/                       # CORS config
-│   │       └── CorsConfig.java
-│   └── src/main/resources/
-│       └── application.properties
-│
-├── cpu-frontend/                         # React frontend (CRA)
-│   ├── src/components/                   # React components
-│   │   ├── CpuList.js                    # Shows brand, model, socket
-│   │   └── CpuDetail.js                  # Shows + edits full details
-│   └── src/services/
-│       └── api.js                        # Axios API calls
-│
-└── README.md                             # Documentation
+├─ cpu_backend/                  # Spring Boot backend
+│  ├─ src/main/java/com/example/cpu_backend/
+│  │  ├─ entity/                # Entities (Cpu, SocketType)
+│  │  │  ├─ Cpu.java
+│  │  │  └─ SocketType.java
+│  │  ├─ repo/                  # JPA Repositories
+│  │  │  ├─ CpuRepository.java
+│  │  │  └─ SocketTypeRepository.java
+│  │  ├─ controller/            # REST Controllers
+│  │  │  └─ CpuController.java
+│  │  └─ config/                # CORS config
+│  │     └─ CorsConfig.java
+│  └─ src/main/resources/
+│     └─ application.properties
+├─ cpu-frontend/                 # React frontend (CRA)
+│  ├─ src/components/
+│  │  ├─ CpuList.js             # Shows brand, model, socket
+│  │  └─ CpuDetail.js           # Shows + edits full details
+│  └─ src/services/
+│     └─ api.js                 # Axios API calls
+└─ README.md                     # Documentation
 
+```text
 
 
 # Backend Setup
