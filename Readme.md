@@ -24,21 +24,30 @@ A simple full-stack web application for managing CPUs, built as an assessment pr
 ## Project Structure
 
 cpu_web_app/
-├── cpu_backend/ # Spring Boot backend
-│ ├── src/main/java/com/example/cpu_backend
-│ │ ├── entity/ # Entities (Cpu, SocketType)
-│ │ ├── repo/ # JPA Repositories
-│ │ ├── controller/ # REST Controllers
-│ │ └── config/ # CORS config
-│ └── src/main/resources/application.properties
+├── cpu_backend/                          # Spring Boot backend
+│   ├── src/main/java/com/example/cpu_backend
+│   │   ├── entity/                       # Entities (Cpu, SocketType)
+│   │   │   ├── Cpu.java
+│   │   │   └── SocketType.java
+│   │   ├── repo/                         # JPA Repositories
+│   │   │   ├── CpuRepository.java
+│   │   │   └── SocketTypeRepository.java
+│   │   ├── controller/                   # REST Controllers
+│   │   │   └── CpuController.java
+│   │   └── config/                       # CORS config
+│   │       └── CorsConfig.java
+│   └── src/main/resources/
+│       └── application.properties
 │
-├── cpu-frontend/ # React frontend (CRA)
-│ ├── src/components/ # React components
-│ │ ├── CpuList.js
-│ │ └── CpuDetail.js
-│ └── src/services/api.js
+├── cpu-frontend/                         # React frontend (CRA)
+│   ├── src/components/                   # React components
+│   │   ├── CpuList.js                    # Shows brand, model, socket
+│   │   └── CpuDetail.js                  # Shows + edits full details
+│   └── src/services/
+│       └── api.js                        # Axios API calls
 │
-└── README.md
+└── README.md                             # Documentation
+
 
 
 # Backend Setup
