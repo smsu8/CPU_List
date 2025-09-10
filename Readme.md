@@ -47,7 +47,7 @@ cpu_web_app/
 │     └─ api.js                 # Axios API calls
 └─ README.md                     # Documentation
 
-```text
+
 
 
 # Backend Setup
