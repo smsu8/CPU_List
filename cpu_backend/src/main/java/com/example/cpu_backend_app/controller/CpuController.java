@@ -1,4 +1,4 @@
-package com.example.cpu_backend_app.controll;
+package com.example.cpu_backend_app.controller;
 
 import com.example.cpu_backend_app.entity.Cpu;
 import com.example.cpu_backend_app.entity.SocketType;
