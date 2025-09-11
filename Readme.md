@@ -61,7 +61,7 @@ cd cpu_backend
 ```properties
 spring.datasource.url=jdbc:postgresql://localhost:5432/cpu_management
 spring.datasource.username=postgres
-spring.datasource.password=your_password
+spring.datasource.password=your_password                //Password of your
 
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
