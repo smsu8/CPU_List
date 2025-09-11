@@ -73,7 +73,10 @@ function CpuDetail() {
 
   const handleChange = (e) => {
     const { name, value, type } = e.target;
-    const parsed = type === 'number' ? (value === '' ? '' : Number(value)) : value;
+    const parsed =
+    type === 'number' || name === 'cores' || name === 'threads'
+      ? (value === '' ? '' : Number(value))
+      : value;
 
     setCpu((prev) => {
       const next = { ...prev, [name]: parsed };
@@ -201,7 +204,7 @@ function CpuDetail() {
             className="form-control"
             name="cores"
             value={cpu.cores}
-            onChange={handleChange}
+            onChange={(e) => handleChange({ target: { name: 'cores', value: Number(e.target.value), type: 'number' } })}
             required
           >
             {CORE_OPTIONS.map((n) => (
@@ -217,7 +220,7 @@ function CpuDetail() {
             className="form-control"
             name="threads"
             value={cpu.threads}
-            onChange={handleChange}
+            onChange={(e) => handleChange({ target: { name: 'threads', value: Number(e.target.value), type: 'number' } })}
             required
           >
             {THREAD_OPTIONS
